@@ -1,0 +1,157 @@
+@charset "UTF-8";
+* {
+  margin: 0px;
+}
+
+.contact__nameTitle::before,
+.contact__emailTitle::before,
+.contact__contentTitle::before, .contact__title::before, .contact__title:after {
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  content: "";
+  border: 1px solid brown;
+  background-color: #b47d7d;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+/* ------------------------共通スタイル------------------------ */
+/* h2 title */
+.contact__nameTitle,
+.contact__emailTitle,
+.contact__contentTitle {
+  width: 100%;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: lighter;
+  padding: 15px 0px 0px;
+  margin-left: 20px;
+  position: relative;
+}
+
+.contact__nameTitle::before,
+.contact__emailTitle::before,
+.contact__contentTitle::before {
+  bottom: 10px;
+  left: -15px;
+}
+
+/* name email content width */
+.contact__name,
+.contact__email,
+.contact__content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/*------------------------contact------------------------*/
+.contact {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'M PLUS 1p', sans-serif;
+  color: #5e2a1d;
+  background-image: url("../img/marble-4145542_1920.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /*------------------------input box------------------------*/
+}
+
+.contact__title {
+  font-size: 25px;
+  letter-spacing: 1px;
+  border-bottom: 1.5px solid #b39873;
+  padding: 20px 10px 5px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.contact__title::before {
+  bottom: -5px;
+  left: -8px;
+}
+
+.contact__title:after {
+  bottom: -5px;
+  right: -8px;
+}
+
+.contact__form {
+  width: 80vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact__nameInput, .contact__emailInput, .contact__content {
+  width: 100%;
+  padding: 5px;
+}
+
+.contact__nameInput, .contact__emailInput {
+  border: 1px solid  brown;
+  border-radius: 10px;
+}
+
+.contact__content {
+  border-color: brown;
+  border-radius: 10px;
+}
+
+.contact__button {
+  font-family: 'M PLUS 1p', sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 1px;
+  background-color: #b39873;
+  border: 2px solid #f1e3d1;
+  border-radius: 10px;
+  padding: 15px 30px;
+  margin-top: 15px;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.contact__button:active {
+  color: brown;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: 2px solid #b39873;
+  background-color: #f1e3d1;
+}
+/*# sourceMappingURL=style.css.map */
