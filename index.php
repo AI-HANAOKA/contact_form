@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>問い合わせ</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./aseets/css/style.css">
@@ -24,7 +24,7 @@
                 <h2 class="contact__contentTitle">問い合わせ内容</h2>
                 <textarea name="content" class="contact__content" rows="15"></textarea>
             </div>
-            <input class="contact__button" type="button" value="入力確認">
+            <input class="contact__button" type="submit" value="入力確認">
         </form>
     </section>
 </body>
