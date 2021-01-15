@@ -1,8 +1,8 @@
     <?php
         // データの受け取り
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $content = $_POST['content'];
+        $name = htmlspecialchars($_POST['name']);
+        $email = htmlspecialchars($_POST['email']);
+        $content = htmlspecialchars($_POST['content']);
 
         // 名前のチェックコード
         if ($name == '') {
@@ -40,8 +40,17 @@
         <p class="contact__name"><?= $name_result; ?></p>
         <p class="contact__email"><?= $email_result; ?></p>
         <p class="contact__content"><?= $content_result; ?></p>
-        <form method="POST" action="" >
+        <form method="POST" action="thanks.php" >
+            <!-- index.phpから受け取った入力データをthanks.phpへcheck.phpでは表示せずにデータを渡す -->
+            <input type="hidden" name="name" value="<?= $name; ?>">
+            <input type="hidden" name="email" value="<?= $email; ?>">
+            <input type="hidden" name="content" value="<?= $content; ?>">
+
             <input type="button" value="戻る" onclick="history.back()">
+            <!--  送信ボタンの表示条件 -->
+            <?php if ($name != '' && $email != '' && $content != ''): ?>
+            <input type="submit" value="送信" class="contact__button">
+            <?php endif; ?>
         </form>
     </section>
     <!-- aタグだとデータが失われる -->
