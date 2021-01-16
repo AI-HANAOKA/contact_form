@@ -1,3 +1,5 @@
+html { font-size: 62.5%;}
+
 // flexbox mixin
 @mixin flex () {
     display: flex;
@@ -21,16 +23,11 @@
     background-color: rgb(180, 125, 125);
     transform: rotate(-45deg);
 }
-
-/* ------------------------共通スタイル------------------------ */
-/* h2 title */
-.contact__nameTitle ,
-.contact__emailTitle ,
-.contact__contentTitle {
+%p-title {
     width: 100%;
-    font-size: 18px;
+    font-size: 1.6rem;
     letter-spacing: 1px;
-    font-weight: lighter;
+    font-weight: bold;
     padding: 15px 0px 5px;
     margin-left: 20px;
     position: relative;
@@ -40,15 +37,44 @@
         left: -15px;
     }
 }
-/* name email content width */
-.contact__name ,
-.contact__email ,
-.contact__content {
+html { font-size: 62.5%;}
+
+// flexbox mixin
+@mixin flex () {
+    display: flex;
+}
+@mixin direction ($direction: row) {
+    flex-direction: $direction;
+}
+@mixin align ($align: flex-start) {
+    align-items: $align;
+}
+@mixin justify ($justify: flex-start) {
+    justify-content: $justify;
+}
+// プレースフォレダーセレクタ
+%decoration {
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    content: "";
+    border: 1px solid brown;
+    background-color: rgb(180, 125, 125);
+    transform: rotate(-45deg);
+}
+%p-title {
     width: 100%;
-    @include flex
-    @include direction(column)
-    @include align (center)
-    @include justify (center)
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    padding: 15px 0px 5px;
+    margin-left: 20px;
+    position: relative;
+    &::before {
+        @extend %decoration;
+        bottom: 10px;
+        left: -15px;
+    }
 }
 /*------------------------contact------------------------*/
 .contact {
@@ -64,8 +90,10 @@
     @include align (center)
     @include justify (center)
     &__title {
-        font-size: 25px;
+        font-size: 1.8rem;
+        text-align: center;
         letter-spacing: 1px;
+        line-height: 1.5;
         border-bottom: 1.5px solid rgb(179, 152, 115);
         padding: 20px 10px 5px;
         margin-bottom: 20px;
@@ -81,46 +109,21 @@
             @extend %decoration;
         }
     }
-    &__form {
+    &__data {
         width: 80vw;
         @include flex
         @include direction(column)
-        @include align (center)
+        @include align (flex-start)
         @include justify (center)
     }
-    /*------------------------input box------------------------*/
-    &__nameInput ,
-    &__emailInput ,
-    &__content {
-        width: 100%;
-        padding: 5px;
+    &__dateTitle {
+        @extend %p-title;
     }
-    &__nameInput ,
-    &__emailInput {
-        border: 1px solid  brown;
-        border-radius: 10px;
-    }
-    &__content {
-        border-color: brown;
-        border-radius: 10px;
-    }
-    &__button {
-        font-family: 'M PLUS 1p', sans-serif;
-        color: #ffffff;
-        font-size: 16px;
+    &__dateValue {
+        font-size: 1.6rem;
         letter-spacing: 1px;
-        background-color: rgb(179, 152, 115);
-        border: 2px solid rgb(241, 227, 209);
-        border-radius: 10px;
-        padding: 15px 30px;
-        margin-top: 15px;
-        transition: all ease 0.5s;
-        &:hover {
-            color: brown;
-            font-weight: bold;
-            letter-spacing: 1px;
-            border: 2px solid rgb(179, 152, 115);
-            background-color: rgb(241, 227, 209);
-        }
+        font-weight: bold;
+        padding: 15px 0px 5px;
     }
+
 }

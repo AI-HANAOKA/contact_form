@@ -32,24 +32,27 @@
     <title>入力内容確認</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&">
-    <link rel="stylesheet" href="./aseets/css/style.css">
+    <link rel="stylesheet" href="./aseets/css/reset.css">
+    <link rel="stylesheet" href="./aseets/css/check.css">
 </head>
 <body>
     <section class="contact">
         <h1 class="contact__title">入力内容確認</h1>
-        <p class="contact__name"><?= $name_result; ?></p>
-        <p class="contact__email"><?= $email_result; ?></p>
-        <p class="contact__content"><?= $content_result; ?></p>
-        <form method="POST" action="thanks.php" >
+        <div class="contact__check">
+            <p class="contact__name"><?= $name_result; ?></p>
+            <p class="contact__email"><?= $email_result; ?></p>
+            <p class="contact__content"><?= $content_result; ?></p>
+        </div>
+        <form method="POST" action="thanks.php" class="contact__form">
             <!-- index.phpから受け取った入力データをthanks.phpへcheck.phpでは表示せずにデータを渡す -->
             <input type="hidden" name="name" value="<?= $name; ?>">
             <input type="hidden" name="email" value="<?= $email; ?>">
             <input type="hidden" name="content" value="<?= $content; ?>">
 
-            <input type="button" value="戻る" onclick="history.back()">
+            <input type="button" value="戻る" onclick="history.back()" class="contact__back">
             <!--  送信ボタンの表示条件 -->
             <?php if ($name != '' && $email != '' && $content != ''): ?>
-            <input type="submit" value="送信" class="contact__button">
+            <input type="submit" value="送信" class="contact__submit">
             <?php endif; ?>
         </form>
     </section>
