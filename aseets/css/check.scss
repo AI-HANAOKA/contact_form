@@ -1,3 +1,5 @@
+html { font-size: 62.5%;}
+
 // flexbox mixin
 @mixin flex () {
     display: flex;
@@ -21,16 +23,11 @@
     background-color: rgb(180, 125, 125);
     transform: rotate(-45deg);
 }
-
-/* ------------------------共通スタイル------------------------ */
-/* h2 title */
-.contact__nameTitle ,
-.contact__emailTitle ,
-.contact__contentTitle {
+%p-title {
     width: 100%;
-    font-size: 18px;
+    font-size: 1.6rem;
     letter-spacing: 1px;
-    font-weight: lighter;
+    font-weight: bold;
     padding: 15px 0px 5px;
     margin-left: 20px;
     position: relative;
@@ -39,16 +36,6 @@
         bottom: 10px;
         left: -15px;
     }
-}
-/* name email content width */
-.contact__name ,
-.contact__email ,
-.contact__content {
-    width: 100%;
-    @include flex
-    @include direction(column)
-    @include align (center)
-    @include justify (center)
 }
 /*------------------------contact------------------------*/
 .contact {
@@ -68,7 +55,7 @@
         letter-spacing: 1px;
         border-bottom: 1.5px solid rgb(179, 152, 115);
         padding: 20px 10px 5px;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         position: relative;
         &::before {
             bottom: -5px;
@@ -81,39 +68,36 @@
             @extend %decoration;
         }
     }
-    &__form {
-        width: 80vw;
+    &__check {
+        width: 85vw;
+        padding-bottom: 50px;
         @include flex
         @include direction(column)
         @include align (center)
         @include justify (center)
     }
-    /*------------------------input box------------------------*/
-    &__nameInput ,
-    &__emailInput ,
+    &__name ,
+    &__email ,
     &__content {
-        width: 100%;
-        padding: 5px;
+        @extend %p-title;
     }
-    &__nameInput ,
-    &__emailInput {
-        border: 1px solid  brown;
-        border-radius: 10px;
+    &__form {
+        width: 85vw;
+        @include flex
+        @include direction(row)
+        @include align (center)
+        @include justify (center)
     }
-    &__content {
-        border-color: brown;
-        border-radius: 10px;
-    }
-    &__button {
-        font-family: 'M PLUS 1p', sans-serif;
+    &__back ,
+    &__submit {
         color: #ffffff;
-        font-size: 16px;
+        font-size: 1.5rem;
         letter-spacing: 1px;
         background-color: rgb(179, 152, 115);
         border: 2px solid rgb(241, 227, 209);
         border-radius: 10px;
-        padding: 15px 30px;
-        margin-top: 15px;
+        padding: 10px 30px;
+        margin: 0px 10px;
         transition: all ease 0.5s;
         &:hover {
             color: brown;

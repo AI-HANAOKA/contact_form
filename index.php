@@ -6,6 +6,7 @@
     <title>問い合わせ</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./aseets/css/reset.css">
     <link rel="stylesheet" href="./aseets/css/style.css">
 </head>
 <body>

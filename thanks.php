@@ -28,16 +28,17 @@
     <title>お問い合わせありがとうございました</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./aseets/css/style.css">
+    <link rel="stylesheet" href="./aseets/css/reset.css">
+    <link rel="stylesheet" href="./aseets/css/thanks.css">
 </head>
 <body>
     <section class="contact">
-        <h1 class="contact__title">お問い合わせありがとうございました！</h1>
+        <h1 class="contact__title">お問い合わせ<br>ありがとうございました！</h1>
         <div class="contact__data">
-            <h3 class="content__dateTitle">お問い合わせ内容</h3>
-            <p class="content__dateValue">お名前： <?= $name; ?></p>
-            <p class="content__dateValue">メールアドレス： <?= $email; ?></p>
-            <p class="content__dateValue">お問い合わせ内容： <?= $content; ?></p>
+            <h3 class="contact__dateTitle">お問い合わせ内容</h3>
+            <p class="contact__dateValue">お名前： <?= $name; ?></p>
+            <p class="contact__dateValue">メールアドレス： <?= $email; ?></p>
+            <p class="contact__dateValue">お問い合わせ内容： <?= $content; ?></p>
         </div>
     </section>
 </body>
