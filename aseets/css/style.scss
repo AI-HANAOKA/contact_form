@@ -124,3 +124,22 @@
         }
     }
 }
+.manage {
+    width: 100vw;
+    padding-top: 50px;
+    @include flex
+    @include direction(row)
+    @include align (center)
+    @include justify (center)
+    &__view {
+        text-decoration: none;
+        padding: 15px 25px;
+        margin:0px 15px;
+        @extend .contact__button;
+    }
+    &__search {
+        text-decoration: none;
+        margin:0px 15px;
+        @extend .contact__button;
+    }
+}

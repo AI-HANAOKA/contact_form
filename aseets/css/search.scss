@@ -1,0 +1,149 @@
+html { font-size: 62.5%;}
+// flexbox mixin
+@mixin flex () {
+    display: flex;
+}
+@mixin direction ($direction: row) {
+    flex-direction: $direction;
+}
+@mixin align ($align: flex-start) {
+    align-items: $align;
+}
+@mixin justify ($justify: flex-start) {
+    justify-content: $justify;
+}
+// プレースフォレダーセレクタ
+%decoration {
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    content: "";
+    border: 1px solid brown;
+    background-color: rgb(180, 125, 125);
+    transform: rotate(-45deg);
+}
+%p-title {
+    width: 100%;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    padding: 15px 0px 5px;
+}
+/*------------------------search------------------------*/
+.search {
+        width: 100vw;
+        height: 100vh;
+        font-family: 'M PLUS 1p', sans-serif;
+        font-size: 1.7rem;
+        color: rgb(94, 42, 29);
+        background-image: url("../img/marble-4145542_1920.jpg");
+        background-size: cover;
+        background-repeat: repeat-y;
+        @include flex
+        @include direction(column)
+        @include align (center)
+        @include justify (center)
+    &__form {
+        width: 80vw;
+        @include flex
+        @include direction(column)
+        @include align (center)
+        @include justify (center)
+    }
+    &__title {
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+        line-height: 1.5;
+        border-bottom: 1.5px solid rgb(179, 152, 115);
+        padding: 20px 10px 5px;
+        margin-bottom: 20px;
+        position: relative;
+        &::before {
+            bottom: -5px;
+            left: -8px;
+            @extend %decoration;
+        }
+        &:after {
+            bottom: -5px;
+            right: -8px;
+            @extend %decoration;
+        }
+    }
+    &__text {
+        text-align: center;
+        padding-bottom: 15px;
+        @extend %p-title;
+    }
+    &__inputBox {
+        border: 1px solid  brown;
+        border-radius: 10px;
+        padding: 5px 10px;
+        margin-bottom: 10px;
+    }
+    &__button {
+        font-family: 'M PLUS 1p', sans-serif;
+        color: #ffffff;
+        font-size: 16px;
+        letter-spacing: 1px;
+        background-color: rgb(179, 152, 115);
+        border: 2px solid rgb(241, 227, 209);
+        border-radius: 10px;
+        padding: 10px 30px;
+        margin: 15px 0px 20px;
+        transition: all ease 0.5s;
+        &:hover {
+            color: brown;
+            font-weight: bold;
+            letter-spacing: 1px;
+            border: 2px solid rgb(179, 152, 115);
+            background-color: rgb(241, 227, 209);
+        }
+    }
+    &__result {
+        width: 100vw;
+        background-color: rgba(24, 26, 44, 0.445);
+        padding: 20px 0px;
+        margin: 10px 0px;
+        @include flex
+        @include direction(row)
+        @include align (flex-start)
+        @include justify (center)
+    }
+    &__num {
+        font-size: 2rem;
+        color: brown;
+        font-weight: bold;
+        letter-spacing: 1px;
+        border: 2px solid rgb(179, 152, 115);
+        border-radius: 10px;
+        background-color: rgb(241, 227, 209);
+        padding: 1rem;
+        margin-right: 20px;
+    }
+    &__valueBox {
+        color: #ffffff;
+    }
+    &__em {
+        color: rgb(94, 42, 29);
+        font-weight: bold;
+    }
+    &__back {
+        color: #ffffff;
+        font-size: 1.8rem;
+        text-decoration: none;
+        letter-spacing: 1px;
+        background-color: rgb(179, 152, 115);
+        border: 2px solid rgb(241, 227, 209);
+        border-radius: 10px;
+        padding: 15px 40px;
+        transition: all ease 0.5s;
+        &:hover {
+            color: brown;
+            font-weight: bold;
+            letter-spacing: 1px;
+            border: 2px solid rgb(179, 152, 115);
+            background-color: rgb(241, 227, 209);
+        }
+    }
+}
+

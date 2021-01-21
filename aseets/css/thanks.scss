@@ -31,50 +31,6 @@ html { font-size: 62.5%;}
     padding: 15px 0px 5px;
     margin-left: 20px;
     position: relative;
-    &::before {
-        @extend %decoration;
-        bottom: 10px;
-        left: -15px;
-    }
-}
-html { font-size: 62.5%;}
-
-// flexbox mixin
-@mixin flex () {
-    display: flex;
-}
-@mixin direction ($direction: row) {
-    flex-direction: $direction;
-}
-@mixin align ($align: flex-start) {
-    align-items: $align;
-}
-@mixin justify ($justify: flex-start) {
-    justify-content: $justify;
-}
-// プレースフォレダーセレクタ
-%decoration {
-    width: 5px;
-    height: 5px;
-    position: absolute;
-    content: "";
-    border: 1px solid brown;
-    background-color: rgb(180, 125, 125);
-    transform: rotate(-45deg);
-}
-%p-title {
-    width: 100%;
-    font-size: 1.6rem;
-    letter-spacing: 1px;
-    font-weight: bold;
-    padding: 15px 0px 5px;
-    margin-left: 20px;
-    position: relative;
-    &::before {
-        @extend %decoration;
-        bottom: 10px;
-        left: -15px;
-    }
 }
 /*------------------------contact------------------------*/
 .contact {
@@ -90,7 +46,7 @@ html { font-size: 62.5%;}
     @include align (center)
     @include justify (center)
     &__title {
-        font-size: 1.8rem;
+        font-size: 3rem;
         text-align: center;
         letter-spacing: 1px;
         line-height: 1.5;
@@ -111,12 +67,15 @@ html { font-size: 62.5%;}
     }
     &__data {
         width: 80vw;
+        padding-bottom: 25px;
         @include flex
         @include direction(column)
-        @include align (flex-start)
+        @include align (center)
         @include justify (center)
     }
     &__dateTitle {
+        font-size: 2.5rem;
+        text-align: center;
         @extend %p-title;
     }
     &__dateValue {
@@ -125,5 +84,23 @@ html { font-size: 62.5%;}
         font-weight: bold;
         padding: 15px 0px 5px;
     }
-
+    &__button {
+        color: #ffffff;
+        font-size: 1.8rem;
+        text-decoration: none;
+        letter-spacing: 1px;
+        background-color: rgb(179, 152, 115);
+        border: 2px solid rgb(241, 227, 209);
+        border-radius: 10px;
+        padding: 15px 40px;
+        margin: 0px 10px;
+        transition: all ease 0.5s;
+        &:hover {
+            color: brown;
+            font-weight: bold;
+            letter-spacing: 1px;
+            border: 2px solid rgb(179, 152, 115);
+            background-color: rgb(241, 227, 209);
+        }
+    }
 }

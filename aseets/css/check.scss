@@ -30,12 +30,6 @@ html { font-size: 62.5%;}
     font-weight: bold;
     padding: 15px 0px 5px;
     margin-left: 20px;
-    position: relative;
-    &::before {
-        @extend %decoration;
-        bottom: 10px;
-        left: -15px;
-    }
 }
 /*------------------------contact------------------------*/
 .contact {
@@ -70,6 +64,7 @@ html { font-size: 62.5%;}
     }
     &__check {
         width: 85vw;
+        text-align: center;
         padding-bottom: 50px;
         @include flex
         @include direction(column)

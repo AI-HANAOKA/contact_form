@@ -27,6 +27,10 @@
             </div>
             <input class="contact__button" type="submit" value="入力確認">
         </form>
+        <div class="manage">
+            <a href="./view.php" class="manage__view">問い合わせ一覧</a>
+            <a href="./search.php" class="manage__search">検索ページ</a>
+        </div>
     </section>
 </body>
 </html>

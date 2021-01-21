@@ -2,7 +2,7 @@ html {
   font-size: 62.5%;
 }
 
-.contact__dateTitle::before, .contact__title::before, .contact__title:after {
+.contact__title::before, .contact__title:after {
   width: 5px;
   height: 5px;
   position: absolute;
@@ -21,41 +21,6 @@ html {
   padding: 15px 0px 5px;
   margin-left: 20px;
   position: relative;
-}
-
-.contact__dateTitle::before {
-  bottom: 10px;
-  left: -15px;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-.contact__dateTitle::before, .contact__title::before, .contact__title:after {
-  width: 5px;
-  height: 5px;
-  position: absolute;
-  content: "";
-  border: 1px solid brown;
-  background-color: #b47d7d;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-
-.contact__dateTitle {
-  width: 100%;
-  font-size: 1.6rem;
-  letter-spacing: 1px;
-  font-weight: bold;
-  padding: 15px 0px 5px;
-  margin-left: 20px;
-  position: relative;
-}
-
-.contact__dateTitle::before {
-  bottom: 10px;
-  left: -15px;
 }
 
 /*------------------------contact------------------------*/
@@ -83,7 +48,7 @@ html {
 }
 
 .contact__title {
-  font-size: 1.8rem;
+  font-size: 3rem;
   text-align: center;
   letter-spacing: 1px;
   line-height: 1.5;
@@ -105,6 +70,7 @@ html {
 
 .contact__data {
   width: 80vw;
+  padding-bottom: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -112,12 +78,17 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.contact__dateTitle {
+  font-size: 2.5rem;
+  text-align: center;
 }
 
 .contact__dateValue {
@@ -125,5 +96,27 @@ html {
   letter-spacing: 1px;
   font-weight: bold;
   padding: 15px 0px 5px;
+}
+
+.contact__button {
+  color: #ffffff;
+  font-size: 1.8rem;
+  text-decoration: none;
+  letter-spacing: 1px;
+  background-color: #b39873;
+  border: 2px solid #f1e3d1;
+  border-radius: 10px;
+  padding: 15px 40px;
+  margin: 0px 10px;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.contact__button:hover {
+  color: brown;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: 2px solid #b39873;
+  background-color: #f1e3d1;
 }
 /*# sourceMappingURL=thanks.css.map */
