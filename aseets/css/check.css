@@ -2,7 +2,7 @@ html {
   font-size: 62.5%;
 }
 
-.contact__name::before, .contact__email::before, .contact__content::before, .contact__title::before, .contact__title:after {
+.contact__title::before, .contact__title:after {
   width: 5px;
   height: 5px;
   position: absolute;
@@ -20,12 +20,6 @@ html {
   font-weight: bold;
   padding: 15px 0px 5px;
   margin-left: 20px;
-  position: relative;
-}
-
-.contact__name::before, .contact__email::before, .contact__content::before {
-  bottom: 10px;
-  left: -15px;
 }
 
 /*------------------------contact------------------------*/
@@ -73,6 +67,7 @@ html {
 
 .contact__check {
   width: 85vw;
+  text-align: center;
   padding-bottom: 50px;
   display: -webkit-box;
   display: -ms-flexbox;

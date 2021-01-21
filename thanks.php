@@ -40,6 +40,7 @@
             <p class="contact__dateValue">メールアドレス： <?= $email; ?></p>
             <p class="contact__dateValue">お問い合わせ内容： <?= $content; ?></p>
         </div>
+        <a class="contact__button" href="./index.php">問い合わせページへ</a>
     </section>
 </body>
 </html>
