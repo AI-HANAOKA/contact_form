@@ -13,8 +13,8 @@
     <div class="search">
         <form action="" method="post" class="search__form">
             <h1 class="search__title">検索ページ</h1>
-            <p class="search__text">検索したいCODEを入力してください。</p>
-            <input type="text" name="code" class="search__inputBox">
+            <label for="code" class="search__text">検索したいCODEを入力してください。</label>
+            <input type="text" name="code" id="code" class="search__inputBox">
             <input type="submit" value="検索" class="search__button">
         </form>
     <?php

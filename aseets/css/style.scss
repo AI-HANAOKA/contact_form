@@ -1,14 +1,8 @@
 // flexbox mixin
-@mixin flex () {
+@mixin flex ($direction: row, $align: flex-start, $justify: flex-start) {
     display: flex;
-}
-@mixin direction ($direction: row) {
     flex-direction: $direction;
-}
-@mixin align ($align: flex-start) {
     align-items: $align;
-}
-@mixin justify ($justify: flex-start) {
     justify-content: $justify;
 }
 // プレースフォレダーセレクタ
@@ -45,10 +39,7 @@
 .contact__email ,
 .contact__content {
     width: 100%;
-    @include flex
-    @include direction(column)
-    @include align (center)
-    @include justify (center)
+    @include flex(column, center, center);
 }
 /*------------------------contact------------------------*/
 .contact {
@@ -59,10 +50,7 @@
     background-image: url("../img/marble-4145542_1920.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    @include flex
-    @include direction(column)
-    @include align (center)
-    @include justify (center)
+    @include flex(column, center, center);
     &__title {
         font-size: 25px;
         letter-spacing: 1px;
@@ -83,10 +71,7 @@
     }
     &__form {
         width: 80vw;
-        @include flex
-        @include direction(column)
-        @include align (center)
-        @include justify (center)
+        @include flex(column, center, center);
     }
     /*------------------------input box------------------------*/
     &__nameInput ,
@@ -127,10 +112,7 @@
 .manage {
     width: 100vw;
     padding-top: 50px;
-    @include flex
-    @include direction(row)
-    @include align (center)
-    @include justify (center)
+    @include flex(row, center, center);
     &__view {
         text-decoration: none;
         padding: 15px 25px;

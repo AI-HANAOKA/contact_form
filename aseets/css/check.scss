@@ -1,16 +1,10 @@
 html { font-size: 62.5%;}
 
 // flexbox mixin
-@mixin flex () {
+@mixin flex ($direction: row, $align: flex-start, $justify: flex-start) {
     display: flex;
-}
-@mixin direction ($direction: row) {
     flex-direction: $direction;
-}
-@mixin align ($align: flex-start) {
     align-items: $align;
-}
-@mixin justify ($justify: flex-start) {
     justify-content: $justify;
 }
 // プレースフォレダーセレクタ
@@ -40,10 +34,7 @@ html { font-size: 62.5%;}
     background-image: url("../img/marble-4145542_1920.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    @include flex
-    @include direction(column)
-    @include align (center)
-    @include justify (center)
+    @include flex(column, center, center);
     &__title {
         font-size: 25px;
         letter-spacing: 1px;
@@ -66,10 +57,7 @@ html { font-size: 62.5%;}
         width: 85vw;
         text-align: center;
         padding-bottom: 50px;
-        @include flex
-        @include direction(column)
-        @include align (center)
-        @include justify (center)
+        @include flex(column, center, center);
     }
     &__name ,
     &__email ,
@@ -78,10 +66,7 @@ html { font-size: 62.5%;}
     }
     &__form {
         width: 85vw;
-        @include flex
-        @include direction(row)
-        @include align (center)
-        @include justify (center)
+        @include flex(row, center, center);
     }
     &__back ,
     &__submit {

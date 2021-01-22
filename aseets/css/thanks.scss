@@ -1,16 +1,10 @@
 html { font-size: 62.5%;}
 
 // flexbox mixin
-@mixin flex () {
+@mixin flex ($direction: row, $align: flex-start, $justify: flex-start) {
     display: flex;
-}
-@mixin direction ($direction: row) {
     flex-direction: $direction;
-}
-@mixin align ($align: flex-start) {
     align-items: $align;
-}
-@mixin justify ($justify: flex-start) {
     justify-content: $justify;
 }
 // プレースフォレダーセレクタ
@@ -41,10 +35,7 @@ html { font-size: 62.5%;}
     background-image: url("../img/marble-4145542_1920.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    @include flex
-    @include direction(column)
-    @include align (center)
-    @include justify (center)
+    @include flex(column, center, center);
     &__title {
         font-size: 3rem;
         text-align: center;
@@ -68,10 +59,7 @@ html { font-size: 62.5%;}
     &__data {
         width: 80vw;
         padding-bottom: 25px;
-        @include flex
-        @include direction(column)
-        @include align (center)
-        @include justify (center)
+        @include flex(column, center, center);
     }
     &__dateTitle {
         font-size: 2.5rem;

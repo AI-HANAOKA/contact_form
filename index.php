@@ -14,16 +14,16 @@
         <h1 class="contact__title">お問い合わせ</h1>
         <form class="contact__form" action="check.php" method="POST">
             <div class="contact__name">
-                <h2 class="contact__nameTitle">お名前</h2>    
-                <input class="contact__nameInput" type="text" name="name">
+                <label for="name" class="contact__nameTitle">お名前</label>    
+                <input class="contact__nameInput" type="text" name="name" id="name">
             </div>
             <div class="contact__email">
-                <h2 class="contact__emailTitle">メールアドレス</h2>
-                <input class="contact__emailInput" name="email" type="text">
+                <label for="email" class="contact__emailTitle">メールアドレス</label>
+                <input class="contact__emailInput" name="email" type="email" id="email">
             </div>
             <div class="contact__content">
-                <h2 class="contact__contentTitle">問い合わせ内容</h2>
-                <textarea name="content" class="contact__content" rows="15"></textarea>
+                <label for="content" class="contact__contentTitle">問い合わせ内容</label>
+                <textarea name="content" class="contact__content" rows="15" id="content"></textarea>
             </div>
             <input class="contact__button" type="submit" value="入力確認">
         </form>
